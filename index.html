@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camel Drawing App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div id="toolbar">
+    <!-- Tool Selector -->
+    <select id="toolSelector">
+      <option value="brush">Brush</option>
+      <option value="eraser">Eraser</option>
+      <option value="text">Text</option>
+      <option value="shapes">Shapes</option>
+    </select>
+
+    <!-- Brush/Eraser Controls -->
+    <div id="brushControls">
+      <select id="brushSelector">
+        <option value="default">Default</option>
+        <option value="pencil">Pencil</option>
+        <option value="crayon">Crayon</option>
+      </select>
+      <input type="color" id="colorPicker" value="#0000ff">
+      <input type="range" id="brushSize" min="1" max="50" value="5">
+    </div>
+
+    <!-- Text Controls -->
+    <div id="textControls" style="display:none">
+      <select id="fontSelector">
+        <option value="Helvetica" selected>Helvetica</option>
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+      </select>
+      <input type="color" id="textColor" value="#0000ff">
+      <input type="number" id="fontSize" min="8" max="100" value="20">
+      <button id="boldBtn">B</button>
+      <button id="italicBtn">I</button>
+      <button id="underlineBtn">U</button>
+    </div>
+  </div>
+
+  <!-- Canvas -->
+  <canvas id="canvas" width="1024" height="768" style="border:1px solid black;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
